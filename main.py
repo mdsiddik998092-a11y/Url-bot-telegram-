@@ -619,12 +619,12 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         uid, uname, fname, coins, refs, ref_by, joined = row
         keyboard = [
-            [InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10"),
-             InlineKeyboardButton("➕ ৫০", callback_data=f"coin_add_{target_id}_50"),
-             InlineKeyboardButton("➕ ১০০", callback_data=f"coin_add_{target_id}_100")],
-            [InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10"),
-             InlineKeyboardButton("➖ ৫০", callback_data=f"coin_sub_{target_id}_50"),
-             InlineKeyboardButton("➖ ১০০", callback_data=f"coin_sub_{target_id}_100")],
+            [InlineKeyboardButton("➕ ১", callback_data=f"coin_add_{target_id}_1"),
+             InlineKeyboardButton("➕ ৫", callback_data=f"coin_add_{target_id}_5"),
+             InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10")],
+            [InlineKeyboardButton("➖ ১", callback_data=f"coin_sub_{target_id}_1"),
+             InlineKeyboardButton("➖ ৫", callback_data=f"coin_sub_{target_id}_5"),
+             InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10")],
             [InlineKeyboardButton("◀️ ব্যাক", callback_data="admin_users")]
         ]
         await query.edit_message_text(
@@ -647,12 +647,12 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         row = get_user(target_id)
         await query.answer(f"✅ +{amount} কয়েন যোগ হয়েছে!", show_alert=True)
         keyboard = [
-            [InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10"),
-             InlineKeyboardButton("➕ ৫০", callback_data=f"coin_add_{target_id}_50"),
-             InlineKeyboardButton("➕ ১০০", callback_data=f"coin_add_{target_id}_100")],
-            [InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10"),
-             InlineKeyboardButton("➖ ৫০", callback_data=f"coin_sub_{target_id}_50"),
-             InlineKeyboardButton("➖ ১০০", callback_data=f"coin_sub_{target_id}_100")],
+            [InlineKeyboardButton("➕ ১", callback_data=f"coin_add_{target_id}_1"),
+             InlineKeyboardButton("➕ ৫", callback_data=f"coin_add_{target_id}_5"),
+             InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10")],
+            [InlineKeyboardButton("➖ ১", callback_data=f"coin_sub_{target_id}_1"),
+             InlineKeyboardButton("➖ ৫", callback_data=f"coin_sub_{target_id}_5"),
+             InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10")],
             [InlineKeyboardButton("◀️ ব্যাক", callback_data="admin_users")]
         ]
         await query.edit_message_text(
@@ -673,12 +673,12 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         row = get_user(target_id)
         await query.answer(f"✅ -{amount} কয়েন কমানো হয়েছে!", show_alert=True)
         keyboard = [
-            [InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10"),
-             InlineKeyboardButton("➕ ৫০", callback_data=f"coin_add_{target_id}_50"),
-             InlineKeyboardButton("➕ ১০০", callback_data=f"coin_add_{target_id}_100")],
-            [InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10"),
-             InlineKeyboardButton("➖ ৫০", callback_data=f"coin_sub_{target_id}_50"),
-             InlineKeyboardButton("➖ ১০০", callback_data=f"coin_sub_{target_id}_100")],
+            [InlineKeyboardButton("➕ ১", callback_data=f"coin_add_{target_id}_1"),
+             InlineKeyboardButton("➕ ৫", callback_data=f"coin_add_{target_id}_5"),
+             InlineKeyboardButton("➕ ১০", callback_data=f"coin_add_{target_id}_10")],
+            [InlineKeyboardButton("➖ ১", callback_data=f"coin_sub_{target_id}_1"),
+             InlineKeyboardButton("➖ ৫", callback_data=f"coin_sub_{target_id}_5"),
+             InlineKeyboardButton("➖ ১০", callback_data=f"coin_sub_{target_id}_10")],
             [InlineKeyboardButton("◀️ ব্যাক", callback_data="admin_users")]
         ]
         await query.edit_message_text(
